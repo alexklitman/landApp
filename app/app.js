@@ -18,6 +18,10 @@ landApp.config(function ($routeProvider) {
             templateUrl: "app/land/land.html",
             controller: "landCtrl"
         })
+        .when("/landform", {
+            templateUrl: "app/landform/landForm.html"
+          
+        })
         .when("/land/:landIndex", {
             templateUrl: "app/landForm/landForm.html",
             controller: "landFormDetailsCtrl"
@@ -25,14 +29,6 @@ landApp.config(function ($routeProvider) {
         .when("/statistics", {
             templateUrl: "app/statistics/statistics.html"
           
-        })
-        .when("/landform", {
-            templateUrl: "app/landform/landForm.html"
-          
-        })
-        .when("/lands", {
-            templateUrl: "app/land/land.html",
-
         })
         .when("/userForm", {
             templateUrl: "app/userform/userForm.html"

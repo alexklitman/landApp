@@ -19,25 +19,15 @@ landApp.factory("lands", function(Land) {
          lands[index] = land;
     }
 
-    // var update = function(index, recipe) {
-    //     recipeArr[index] = recipe;
-    // }
-
     function remove(index) {
         lands.splice(index, 1);
     }
 
-    // var remove = function(index) {
-    //     recipeArr.splice(index, 1);
-    // }
 
     function removeAll() {
         lands = [];
     }
 
-    // var removeAll = function() {
-    //     recipeArr = [];
-    // }
 
     function setLands(landsPlain) {
         lands = [];
