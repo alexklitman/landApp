@@ -24,5 +24,13 @@ landApp.controller("landFormDetailsCtrl", function ($scope, $location, lands,  $
         lands.remove($routeParams.landIndex);
         $location.path("/land");
     }
+
+    $scope.addLand = function () {
+        lands.add($scope.land);
+        $location.path("/land");
+    }
     
+    // $scope.addLand = function() {
+    //     $scope.lands.push(new Land($scope.land));
+    //   }
 })
