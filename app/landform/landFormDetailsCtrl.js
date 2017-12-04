@@ -12,7 +12,7 @@ landApp.controller("landFormDetailsCtrl", function ($scope, $location, lands,  $
     
 
     $scope.cancel = function() {
-        $location.path("/landform");
+        $location.path("/land");
     }
 
     $scope.update = function() {
@@ -22,7 +22,7 @@ landApp.controller("landFormDetailsCtrl", function ($scope, $location, lands,  $
 
     $scope.remove = function() {
         lands.remove($routeParams.landIndex);
-        $location.path("/landforn");
+        $location.path("/land");
     }
     
 })

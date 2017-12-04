@@ -1,7 +1,7 @@
 
 landApp.controller("landCtrl", function($scope, lands, $log, $http, $location) {
     //$scope.test = "ewewew";
-    //if the length of array is 0 meening never was loaded
+    //if the length of array lands is 0 meening never was loaded
     if (lands.getAll().length === 0) {
       // http call to get data from jso
       $http.get("app/model/data/lands.json").then(function mySuccess(response) {
