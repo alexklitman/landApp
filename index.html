@@ -1,0 +1,39 @@
+
+<!DOCTYPE html>
+<html lang="he" dir="rtl" ng-app="landApp">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular-route.js"></script>
+    <script src="app/app.js"></script>
+    <script src="app/model/land.js"></script>
+    <script src="app/model/lands.js"></script>
+    <script src="app/land/landCtrl.js"></script>
+    <script src="app/landform/landFormDetailsCtrl.js"></script>
+    
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load('current', {packages: ['corechart']});
+      google.charts.setOnLoadCallback(drawChart);
+    </script>
+    
+
+    <link rel="stylesheet" href="css/style.css"> 
+    <title>Document</title>
+</head>
+<body>
+
+    <ng-view></ng-view>
+    
+</body>
+</html>
+

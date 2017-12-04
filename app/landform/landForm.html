@@ -1,0 +1,104 @@
+
+
+    <nav class="navbar navbar-inverse">
+        <div class="container">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only"> Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"> </span>
+                <span class="icon-bar"> </span>
+            </button>
+
+            <a class="navbar-brand" href="#"> לדף הבית</a>
+
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="">
+                        <a href="#!/statistics">סטטיסטיקה</a>
+                    </li>
+                    <li>
+                        <a href="#!/land">פרטי נכס</a>
+                    </li>
+                    <li>
+                        <a href="#!/user">פרטי משתמש</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!--******************************************************************-->
+
+    <div class="container">
+        <form action="" method="POST" role="form">
+            <legend>הזנת פרטי נכס</legend>
+
+            <div class="col-md-6 form-group">
+                <h3>פרטי המשכיר</h3>
+                    <label for="textbox2">שם פרטי</label>
+                    <input class="form-control" id="textbox2" type="text" ng-model="land.firstname"/>
+                    <label for="textbox2">שם משפחה</label>
+                    <input class="form-control" id="textbox2" type="text" ng-model="land.lastname"/>
+                    <label for="textbox2">מס' ת.ז /ח.פ</label>
+                    <input class="form-control" id="textbox2" type="number" min="0" ng-model="land.id"/>
+                    <label for="textbox2">טלפון</label>
+                    <input class="form-control" id="textbox2" type="text" ng-model="land.telephone"/>
+                    <label for="textbox2">דוא"ל</label>
+                    <input class="form-control" id="textbox2" type="email" name="email" ng-model="land.email"/>
+                    
+                    <h3>פרטי החוזה</h3>
+                    <label for="textbox2">תאריך תחילה</label>
+                    <input class="form-control" id="textbox2" type="date" name="sdate" ng-model="land.startdate"/>
+                    <label for="textbox2">תאריך סיום</label>
+                    <input class="form-control" id="textbox2" type="date" name="edate" ng-model="land.enddate"/>
+                    <label for="textbox2">גובה שכירות חודשית</label>
+                    <input class="form-control" id="textbox2" type="number" min="0" ng-model="land.rentprice"/>
+                    <label for="textbox2">צרף חוזה</label>
+                    <input type="file" name="pic" accept="image/*" ng-model="land.rentfile"/>
+
+            </div>
+
+            <div class="col-md-6 form-group">
+                <div class="selectContainer">
+                    <h3>פרטי הנכס</h3>
+                    <label for="textbox1">בחר סוג נכס</label>
+                    <select class="form-control" name="size">
+                        <option value="building" ng-model="lands.buildingtype">מבנה</option>
+                        <option value="apartment" ng-model="lands.buildingtype">דירה</option>
+                        <option value="plot" ng-model="lands.buildingtype">מגרש</option>
+                    </select>
+                </div>
+
+                <label for="textbox2">שטח במ"ר</label>
+                <input class="form-control" id="textbox2" type="number" min="0" ng-model="land.squaremeter"/>
+
+                <label for="textbox2">מס' נכס</label>
+                <input class="form-control" id="textbox2" type="number" min="0" required ng-model="land.propertynum"/>
+
+                <h3>רישום בטאבו</h3>
+                <label for="textbox2">מס' נסח</label>
+                <input class="form-control" id="textbox2" type="number" min="0" ng-model="land.tabunum"/>
+                <label for="textbox2">צרף מסמך</label>
+                <input type="file" name="pic" accept="image/*" ng-model="land.tabufile"/>
+
+                <h3>כתובת הנכס</h3>
+                <label for="textbox2">שם רחוב</label>
+                <input class="form-control" id="textbox2" type="text" ng-model="land.streetname"/>
+                <label for="textbox2">מס' בית</label>
+                <input class="form-control" id="textbox2" type="text" ng-model="land.housenum"/>
+                <label for="textbox2">עיר</label>
+                <input class="form-control" id="textbox2" type="text" ng-model="land.city"/>
+                <label for="textbox2">צרף תמונה</label>
+                <input type="file" name="pic" accept="image/*" ng-model="land.housefile"/>
+
+            </div>
+
+            <!-- <a class="btn btn-primary btn-md">שמור</a>
+            <a class="btn btn-primary btn-md">מחיקת נכס</a> -->
+            <button type="submit" class="btn btn-primary" ng-click="update()">שמור</button>
+            <button type="submit" class="btn btn-primary" ng-click="remove()">מחיקת נכס</button>
+
+        </form>
+    </div>
+    <!-- <span class="clearfix"></span> -->
+    

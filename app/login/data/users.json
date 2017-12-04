@@ -1,0 +1,12 @@
+
+[
+    {
+        "email":"alexklit@gmail.com",
+        "password": "alex123",
+        "firstName":"Alex",
+        "lastName": "Klitman",
+        "data": "app/model/data/lands.json"
+        
+    }
+]
+
