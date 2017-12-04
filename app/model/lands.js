@@ -23,6 +23,22 @@ landApp.factory("lands", function(Land) {
     //     recipeArr[index] = recipe;
     // }
 
+    function remove(index) {
+        lands.splice(index, 1);
+    }
+
+    // var remove = function(index) {
+    //     recipeArr.splice(index, 1);
+    // }
+
+    function removeAll() {
+        lands = [];
+    }
+
+    // var removeAll = function() {
+    //     recipeArr = [];
+    // }
+
     function setLands(landsPlain) {
         lands = [];
         for (var i = 0; i < landsPlain.length; i++) {
@@ -43,6 +59,9 @@ landApp.factory("lands", function(Land) {
         getLandById: getLandById,
         addLand: addLand,
         setLands: setLands,
-        update: update
+        update: update,
+        remove: remove,
+        removeAll: removeAll
+
     }
 })
