@@ -1,17 +1,21 @@
 
 landApp.controller("landCtrl", function($scope, lands, $log, $http, $location) {
     //$scope.test = "ewewew";
+    //if the length of array is 0 meening never was loaded
+    if (lands.getAll().length === 0) {
+      // http call to get data from jso
+      $http.get("app/model/data/lands.json").then(function mySuccess(response) {
+          // Updating the service with the data
+          lands.setLands(response.data);
 
-    // http call to get data from json
-    $http.get("app/model/data/lands.json").then(function mySuccess(response) {
-        // Updating the service with the data
-        lands.setLands(response.data);
-
-        // Getting the data from the service
-        $scope.lands = lands.getAll();
-      }, function myError(response) {
-        alert("error" + JSON.stringify(response.status));
-    });
+          // Getting the data from the service
+          $scope.lands = lands.getAll();
+        }, function myError(response) {
+          alert("error" + JSON.stringify(response.status));
+      });
+    } else {
+      $scope.lands = lands.getAll();
+    }
 
     // $scope.addLand = function() {
     //     cars.addLand(new Land("Susita", "Carmel", "1972", 12022939));
