@@ -3,10 +3,7 @@ landApp.controller("landCtrl", function($scope, lands, $log, $http, $location) {
     //$scope.test = "ewewew";
 
     // http call to get data from json
-    $bol = false; 
-    if ($bol == false) {
-      $bol = true; 
-      $http.get("app/model/data/lands.json").then(function mySuccess(response) {
+    $http.get("app/model/data/lands.json").then(function mySuccess(response) {
         // Updating the service with the data
         lands.setLands(response.data);
 
@@ -15,8 +12,6 @@ landApp.controller("landCtrl", function($scope, lands, $log, $http, $location) {
       }, function myError(response) {
         alert("error" + JSON.stringify(response.status));
     });
-    }
-    
 
     // $scope.addLand = function() {
     //     cars.addLand(new Land("Susita", "Carmel", "1972", 12022939));
