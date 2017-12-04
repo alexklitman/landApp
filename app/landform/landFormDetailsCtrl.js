@@ -17,7 +17,7 @@ landApp.controller("landFormDetailsCtrl", function ($scope, $location, lands,  $
 
     $scope.update = function() {
         lands.update($routeParams.landIndex, $scope.land);
-        $location.path("/landform");
+        $location.path("/land");
     }
 
     $scope.remove = function() {
