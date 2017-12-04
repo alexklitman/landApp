@@ -3,9 +3,9 @@ landApp.controller("landCtrl", function($scope, lands, $log, $http, $location) {
     //$scope.test = "ewewew";
 
     // http call to get data from json
-    var bol = false; 
-    if (bol==false) {
-      bol = true; 
+    $bol = false; 
+    if ($bol == false) {
+      $bol = true; 
       $http.get("app/model/data/lands.json").then(function mySuccess(response) {
         // Updating the service with the data
         lands.setLands(response.data);
