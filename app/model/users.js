@@ -1,54 +1,51 @@
 
 
-landApp.factory("lands", function(Land) {
-    var lands = [];
+landApp.factory("users", function(User) {
+    var users = [];
 
     function getAll() {
-        return lands;
+        return users;
     }
 
-    function getLandById(index) {
-        return lands[index];
+    function getUserById(index) {
+        return users[index];
     }
 
-    function addLand(land) {
-        lands.push(land);
+    function addUser(user) {
+        users.push(user);
     }
 
-     function update(index, land) {
-         lands[index] = land;
+     function update(index, user) {
+         users[index] = user;
     }
 
     function remove(index) {
-        lands.splice(index, 1);
+        users.splice(index, 1);
     }
 
 
     function removeAll() {
-        lands = [];
+        users = [];
     }
 
 
-    function setLands(landsPlain) {
-        lands = [];
-        for (var i = 0; i < landsPlain.length; i++) {
-            lands.push(new Land(landsPlain[i].buildingtype, landsPlain[i].squaremeter, 
-                landsPlain[i].propertynum, landsPlain[i].tabunum,
-                landsPlain[i].tabufile, landsPlain[i].streetname,
-                landsPlain[i].housenum, landsPlain[i].city,
-                landsPlain[i].housefile, landsPlain[i].firstname,
-                landsPlain[i].lastname, landsPlain[i].id,
-                landsPlain[i].telephone, landsPlain[i].email,
-                landsPlain[i].startdate, landsPlain[i].enddate,
-                landsPlain[i].rentprice, landsPlain[i].rentfile))
+    function setUsers(usersPlain) {
+        users = [];
+        for (var i = 0; i < usersPlain.length; i++) {
+            users.push(new User(usersPlain[i].usertype, usersPlain[i].workerid, 
+                usersPlain[i].propertynum, usersPlain[i].firstname,
+                usersPlain[i].lastname, usersPlain[i].id,
+                usersPlain[i].telephone, usersPlain[i].email,
+                usersPlain[i].streetname, usersPlain[i].housenumber,
+                usersPlain[i].city))
         }
     }
 
     return {
         getAll: getAll,
-        getLandById: getLandById,
-        addLand: addLand,
-        setLands: setLands,
+        getUserById: getUserById,
+        addUser: addUser,
+        //setLands: setLands,
         update: update,
         remove: remove,
         removeAll: removeAll
