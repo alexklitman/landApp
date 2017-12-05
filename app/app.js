@@ -19,7 +19,8 @@ landApp.config(function ($routeProvider) {
             controller: "landCtrl"
         })
         .when("/landform", {
-            templateUrl: "app/landform/landForm.html"
+            templateUrl: "app/landform/landForm.html",
+            controller: "landFormDetailsCtrl"
           
         })
         .when("/land/:landIndex", {
