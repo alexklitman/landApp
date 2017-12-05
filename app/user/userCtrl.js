@@ -6,7 +6,7 @@ landApp.controller("userCtrl", function($scope, users, $log, $http, $location) {
       // http call to get data from jso
       $http.get("app/user/data/userlist.json").then(function mySuccess(response) {
           // Updating the service with the data
-          users.setLands(response.data);
+          users.setUsers(response.data);
 
           // Getting the data from the service
           $scope.users = users.getAll();
