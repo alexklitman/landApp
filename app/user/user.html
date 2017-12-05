@@ -31,14 +31,11 @@
             <div class="row">
               <div class="col-sm-6" style="background-color:lavender;">
                     <label for="sel1">בחר מרשימה</label>
-                    <select class="form-control" id="sel1">
-                      <option>1</option>
-                      <option>2</option>
-                      <option>3</option>
-                      <option>4</option>
+                    <select class="form-control" id="sel1" ng-model="selectedProp">
+                      <option ng-repeat="user in users">{{user.usertype}}{{user.firstname}} {{user.lastname}}</option>
                     </select>
                     <br>
-                    <a class="btn btn-primary btn-md" href="#!/userForm">בחר משתמש קיים</a>
+                    <a class="btn btn-primary btn-md" ng-click="openDetails()">בחר משתמש קיים</a>
               </div>
               <br>
               <div class="col-sm-6" style="background-color:lavenderblush;"> 
