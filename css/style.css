@@ -89,3 +89,7 @@
        text-align: center;
    }
 
+   .danger {background-color: #f44336;} /* Red */ 
+   .danger:hover {background: #da190b;}
+   
+

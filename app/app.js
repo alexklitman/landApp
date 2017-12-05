@@ -18,6 +18,11 @@ landApp.config(function ($routeProvider) {
             templateUrl: "app/land/land.html",
             controller: "landCtrl"
         })
+        .when("/landformnew", {
+            templateUrl: "app/landformnew/landFormNew.html",
+            controller: "landFormDetailsNewCtrl"
+          
+        })
         .when("/landform", {
             templateUrl: "app/landform/landForm.html",
             controller: "landFormDetailsCtrl"
