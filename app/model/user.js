@@ -7,7 +7,6 @@ landApp.factory("User", function() {
         {
         this.usertype = usertype;
         this.workerid = workerid;
-        this.propertynum = propertynum;
         this.firstname = firstname;
 
         this.lastname = lastname;

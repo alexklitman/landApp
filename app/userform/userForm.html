@@ -35,39 +35,39 @@
                 <div class="selectContainer">
                         <h3>סוג משתמש</h3>
                         <label for="textbox1">בחר סוג נכס</label>
-                        <select class="form-control" name="size">
+                        <select class="form-control" name="size" ng-model="user.usertype">
                             <option value="building">מנהל מערכת</option>
                             <option value="apartment">מנהל נכס</option>
                         </select>
                 </div>
             <h3>פרטי משתמש</h3>
                 <label for="textbox2">מס' עובד</label>
-                <input class="form-control" id="textbox2" type="number" min="0" required/>
+                <input class="form-control" id="textbox2" type="number" min="0" required ng-model="user.workerid"/>
                 <label for="textbox2">שם פרטי</label>
-                <input class="form-control" id="textbox2" type="text" />
+                <input class="form-control" id="textbox2" type="text" ng-model="user.firstname"/>
                 <label for="textbox2">שם משפחה</label>
-                <input class="form-control" id="textbox2" type="text" />
+                <input class="form-control" id="textbox2" type="text" ng-model="user.lastname"/>
                 <label for="textbox2"></label>מס' ת.ז</label>
-                <input class="form-control" id="textbox2" type="number" min="0" required/>
+                <input class="form-control" id="textbox2" type="number" min="0" required ng-model="user.id"/>
                 <label for="textbox2">טלפון</label>
-                <input class="form-control" id="textbox2" type="text" min="0" />
+                <input class="form-control" id="textbox2" type="text" min="0" ng-model="user.telephone"/>
                 <label for="textbox2">דוא"ל</label>
-                <input class="form-control" id="textbox2" type="email" name="email" />
+                <input class="form-control" id="textbox2" type="email" name="email" ng-model="user.email"/>
 
                 <h3>כתובת</h3>
                     <label for="textbox2">שם רחוב</label>
-                    <input class="form-control" id="textbox2" type="text" />
+                    <input class="form-control" id="textbox2" type="text" ng-model="user.streetname"/>
                     <label for="textbox2">מס' בית</label>
-                    <input class="form-control" id="textbox2" type="text" />
+                    <input class="form-control" id="textbox2" type="text" ng-model="user.housenumber"/>
                     <label for="textbox2">עיר</label>
-                    <input class="form-control" id="textbox2" type="text" />
+                    <input class="form-control" id="textbox2" type="text" ng-model="user.city"/>
 
         </div>
+        <button type="button" class="btn btn-primary" ng-click="update()">שמור</button>
+        <button type="button" class="btn danger btn-primary" ng-click="remove()">מחיקת נכס</button>
 
-        <!-- <a class="btn btn-primary btn-md">שמור</a>
-            <a class="btn btn-primary btn-md">מחיקת נכס</a> -->
-        <button type="submit" class="btn btn-primary">שמור</button>
-        <button type="submit" class="btn btn-primary">מחק משתמש</button>
+        <!-- <button type="submit" class="btn btn-primary">שמור</button>
+        <button type="submit" class="btn btn-primary">מחק משתמש</button> -->
 
     </form>
 </div>

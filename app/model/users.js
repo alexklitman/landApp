@@ -32,12 +32,10 @@ landApp.factory("users", function(User) {
     function setUsers(usersPlain) {
         users = [];
         for (var i = 0; i < usersPlain.length; i++) {
-            users.push(new User(usersPlain[i].usertype, usersPlain[i].workerid, 
-                usersPlain[i].propertynum, usersPlain[i].firstname,
-                usersPlain[i].lastname, usersPlain[i].id,
-                usersPlain[i].telephone, usersPlain[i].email,
-                usersPlain[i].streetname, usersPlain[i].housenumber,
-                usersPlain[i].city))
+            users.push(new User(usersPlain[i].usertype, usersPlain[i].workerid,
+                usersPlain[i].firstname,usersPlain[i].lastname, usersPlain[i].id,
+                usersPlain[i].telephone, usersPlain[i].email,usersPlain[i].streetname,
+                usersPlain[i].housenumber,usersPlain[i].city))
         }
     }
 
