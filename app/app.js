@@ -11,12 +11,13 @@ landApp.config(function ($routeProvider) {
             
         })
         .when("/user", {
-            templateUrl: "app/user/user.html"
+            templateUrl: "app/user/user.html",
+            controller: "userCtrl"
           
         })
         .when("/user/:userIndex", {
             templateUrl: "app/userForm/userForm.html",
-            controller: "landFormDetailsCtrl"
+            controller: "userFormDetailsCtrl"
         })
         .when("/land", {
             templateUrl: "app/land/land.html",
