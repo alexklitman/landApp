@@ -26,7 +26,7 @@ landApp.controller("landFormDetailsCtrl", function ($scope, $location, lands,  $
     }
 
     $scope.addLand = function () {
-        lands.add($scope.land);
+        lands.addLand($scope.land);
         $location.path("/land");
     }
     
