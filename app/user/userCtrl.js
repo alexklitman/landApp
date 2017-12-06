@@ -53,8 +53,13 @@ landApp.controller("userCtrl", function($scope, users, $log, $http, $location) {
         $location.path("/user/" + userIndex)
       }
   
-      $scope.openDetails = function() {
-        $location.path("/user/" + $scope.selectedProp)
-    }
+    $scope.openDetails = function(index) {
+      $location.path("/user/" + index)
+  }
+
+  //   $scope.openDetails = function() {
+  //     $location.path("/user/" + $scope.selectedProp)
+  // }
+ 
    
 })

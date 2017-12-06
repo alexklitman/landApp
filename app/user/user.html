@@ -29,17 +29,12 @@
     
         <div class="container-fluid">
             <div class="row">
-              <div class="col-sm-6" style="background-color:lavender;">
-                    <label for="sel1">בחר מרשימה</label>
-                    <select class="form-control" id="sel1" ng-model="selectedProp">
-                      <option ng-repeat="user in users" value="{{$index}}">{{user.usertype}} {{user.firstname}} {{user.lastname}}</option>
-                    </select>
+              <div class="col-sm-12" style="background-color:lavender;">
+                    <h2>בחר מרשימה</h2>
+                    <ul class="list-group"></ul>
+                    <a class="list-group-item list-group-item-action" ng-click="openDetails($index)" ng-repeat="user in users">{{user.usertype}} {{user.firstname}} {{user.lastname}}</a>
+                    </ul>
                     <br>
-                    <a class="btn btn-primary btn-md" ng-click="openDetails()">בחר משתמש קיים</a>
-              </div>
-              <br>
-              <div class="col-sm-6" style="background-color:lavenderblush;"> 
                     <a class="btn btn-primary btn-md" href="#!/userformnew">הוסף משתמש חדש</a>
-              </div>
-            </div>
+                </div>
           </div>
