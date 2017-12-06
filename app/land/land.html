@@ -28,9 +28,10 @@
 <div class="container-fluid">
     <div class="row">
         <div class="col-sm-12" style="background-color:lavender;">
-            <h2>בחר מרשימה</h2>
+            <h3>פרטי נכס</h3>
+            <h4>בחר מרשימה</h4>
             <ul class="list-group"></ul>
-            <a class="list-group-item list-group-item-action" ng-click="openDetails($index)" ng-repeat="land in lands">{{land.buildingtype}} {{land.streetname}} {{land.housenum}} {{land.city}}</a>
+            <a class="list-group-item list-group-item-action" title="בבקשה לחץ" ng-click="openDetails($index)" ng-repeat="land in lands">{{land.buildingtype}} {{land.streetname}} {{land.housenum}} {{land.city}}</a>
                 <!-- <li class="list-group-item" ng-click="openDetails()" ng-repeat="land in lands" value="{{$index}}">{{land.buildingtype}} {{land.streetname}} {{land.housenum}} {{land.city}}</li> -->
             </ul>
             <!-- <label for="sel1">בחר מרשימה</label>
