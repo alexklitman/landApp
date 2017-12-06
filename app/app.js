@@ -42,14 +42,19 @@ landApp.config(function ($routeProvider) {
             controller: "landFormDetailsCtrl"
           
         })
-        .when("/statistics", {
-            templateUrl: "app/statistics/statistics.html"
+        // .when("/statistics", {
+        //     templateUrl: "app/statistics/statistics.html"
           
-        })
+        // })
         .when("/userForm", {
             templateUrl: "app/userform/userForm.html"
           
         })
+        .when("/statistics", {
+            templateUrl: "app/statistics/statistics.html",
+            controller: "chartsCtrl"
+        })    
+
         .otherwise({
             redirectTo: "/"
           });
