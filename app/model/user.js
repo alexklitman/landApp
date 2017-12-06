@@ -2,7 +2,7 @@
 landApp.factory("User", function() {
     
     // User Constructor
-    function Land(usertype, workerid, firstname, lastname, id, telephone, email, streetname,
+    function User(usertype, workerid, firstname, lastname, id, telephone, email, streetname,
         housenumber, city)
         {
         this.usertype = usertype;

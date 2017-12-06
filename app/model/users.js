@@ -43,7 +43,7 @@ landApp.factory("users", function(User) {
         getAll: getAll,
         getUserById: getUserById,
         addUser: addUser,
-        //setLands: setLands,
+        setUsers: setUsers,
         update: update,
         remove: remove,
         removeAll: removeAll
