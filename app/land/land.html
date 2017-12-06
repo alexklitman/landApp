@@ -1,46 +1,50 @@
+<nav class="navbar navbar-inverse">
+    <div class="container">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only"> Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"> </span>
+            <span class="icon-bar"> </span>
+        </button>
 
+        <a class="navbar-brand" href="#"> לדף הבית</a>
 
-    <nav class="navbar navbar-inverse">
-            <div class="container">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="sr-only"> Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"> </span>
-                    <span class="icon-bar"> </span>
-                </button>
-    
-                <a class="navbar-brand" href="#"> לדף הבית</a>
-    
-                <div class="navbar-collapse collapse">
-                    <ul class="nav navbar-nav navbar-right">
-                        <li class="">
-                            <a href="#!/statistics">סטטיסטיקה</a>
-                        </li>
-                        <li>
-                            <a href="#!/land">פרטי נכס</a>
-                        </li>
-                        <li>
-                            <a href="#!/user">פרטי משתמש</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-    
-        <div class="container-fluid">
-            <div class="row">
-              <div class="col-sm-6" style="background-color:lavender;">
-                    <label for="sel1">בחר מרשימה</label>
+        <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav navbar-right">
+                <li class="">
+                    <a href="#!/statistics">סטטיסטיקה</a>
+                </li>
+                <li>
+                    <a href="#!/land">פרטי נכס</a>
+                </li>
+                <li>
+                    <a href="#!/user">פרטי משתמש</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-sm-12" style="background-color:lavender;">
+            <h2>בחר מרשימה</h2>
+            <ul class="list-group"></ul>
+            <a class="list-group-item list-group-item-action" ng-click="openDetails($index)" ng-repeat="land in lands">{{land.buildingtype}} {{land.streetname}} {{land.housenum}} {{land.city}}</a>
+                <!-- <li class="list-group-item" ng-click="openDetails()" ng-repeat="land in lands" value="{{$index}}">{{land.buildingtype}} {{land.streetname}} {{land.housenum}} {{land.city}}</li> -->
+            </ul>
+            <!-- <label for="sel1">בחר מרשימה</label>
                     <select class="form-control" id="sel1" ng-model="selectedProp">
                       <option ng-repeat="land in lands" value="{{$index}}">{{land.buildingtype}} {{land.streetname}} {{land.housenum}} {{land.city}}</option>  
                     </select>
+                    <br> -->
                     <br>
-                    <a class="btn btn-primary btn-md" ng-click="openDetails()">בחר נכס קיים</a>
-              </div>
-              <br>
-              <div class="col-sm-6" style="background-color:lavenderblush;"> 
-                  <a class="btn btn-primary btn-md" href="#!/landformnew">הוסף נכש חדש</a>
-              </div>
-            </div>
-          </div>
-
+                    <a class="btn btn-primary btn-md" href="#!/landformnew">הוסף נכש חדש</a>
+            <!-- <a class="btn btn-primary btn-md" ng-click="openDetails()">בחר נכס קיים</a> -->
+        </div>
+        <br>
+        <!-- <div class="col-sm-6" style="background-color:lavenderblush;">
+            <a class="btn btn-primary btn-md" href="#!/landformnew">הוסף נכש חדש</a>
+        </div> -->
+    </div>
+</div>

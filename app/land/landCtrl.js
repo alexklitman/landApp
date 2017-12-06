@@ -53,8 +53,8 @@ landApp.controller("landCtrl", function($scope, lands, $log, $http, $location) {
         $location.path("/land/" + landIndex)
       }
   
-      $scope.openDetails = function() {
-        $location.path("/land/" + $scope.selectedProp)
+      $scope.openDetails = function(index) {
+        $location.path("/land/" + index)
     }
    
 })
