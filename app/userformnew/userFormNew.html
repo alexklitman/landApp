@@ -1,0 +1,71 @@
+<nav class="navbar navbar-inverse">
+    <div class="container">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only"> Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"> </span>
+            <span class="icon-bar"> </span>
+        </button>
+
+        <a class="navbar-brand" href="#"> לדף הבית</a>
+
+        <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav navbar-right">
+                <li class="">
+                    <a href="#!/statistics">סטטיסטיקה</a>
+                </li>
+                <li>
+                    <a href="#!/land">פרטי נכס</a>
+                </li>
+                <li>
+                    <a href="#!/user">פרטי משתמש</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!--******************************************************************-->
+
+<div class="container">
+    <form action="" method="POST" role="form">
+        <legend>הזנת פרטי משתמש</legend>
+
+        <div class="col-md-12 form-group">
+                <div class="selectContainer">
+                        <h3>סוג משתמש</h3>
+                        <label for="textbox1">בחר סוג משתמש</label>
+                        <select class="form-control" name="size" ng-model="user.usertype">
+                            <option value="מנהל מערכת">מנהל מערכת</option>
+                            <option value="מנהל נכס">מנהל נכס</option>
+                        </select>
+                </div>
+            <h3>פרטי משתמש</h3>
+                <label for="textbox2">מס' עובד</label>
+                <input class="form-control" id="textbox2" type="number" min="0" required ng-model="user.workerid"/>
+                <label for="textbox2">שם פרטי</label>
+                <input class="form-control" id="textbox2" type="text" ng-model="user.firstname"/>
+                <label for="textbox2">שם משפחה</label>
+                <input class="form-control" id="textbox2" type="text" ng-model="user.lastname"/>
+                <label for="textbox2"></label>מס' ת.ז</label>
+                <input class="form-control" id="textbox2" type="number" min="0" required ng-model="user.id"/>
+                <label for="textbox2">טלפון</label>
+                <input class="form-control" id="textbox2" type="text" min="0" ng-model="user.telephone"/>
+                <label for="textbox2">דוא"ל</label>
+                <input class="form-control" id="textbox2" type="email" name="email" ng-model="user.email"/>
+
+                <h3>כתובת</h3>
+                    <label for="textbox2">שם רחוב</label>
+                    <input class="form-control" id="textbox2" type="text" ng-model="user.streetname"/>
+                    <label for="textbox2">מס' בית</label>
+                    <input class="form-control" id="textbox2" type="text" ng-model="user.housenumber"/>
+                    <label for="textbox2">עיר</label>
+                    <input class="form-control" id="textbox2" type="text" ng-model="user.city"/>
+
+        </div>
+        <button type="button" class="btn btn-primary" ng-click="addUser()">שמור</button>
+        <!-- <button type="button" class="btn danger btn-primary" ng-click="remove()">מחיקת נכס</button> -->
+
+    </form>
+</div>
+<!-- <span class="clearfix"></span> -->

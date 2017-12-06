@@ -19,6 +19,11 @@ landApp.config(function ($routeProvider) {
             templateUrl: "app/userForm/userForm.html",
             controller: "userFormDetailsCtrl"
         })
+        .when("/userformnew", {
+            templateUrl: "app/userformnew/userFormNew.html",
+            controller: "userFormDetailsNewCtrl"
+          
+        })
         .when("/land", {
             templateUrl: "app/land/land.html",
             controller: "landCtrl"
