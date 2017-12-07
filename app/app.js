@@ -1,4 +1,4 @@
-var landApp = angular.module("landApp", ["ngRoute"]);
+var landApp = angular.module("landApp", ["ngRoute", "googlechart"]);
 
 landApp.config(function ($routeProvider) {
     $routeProvider
